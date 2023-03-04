@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "mw-dube-dashboard"
+version = "0.1.0"
+description = ""
+authors = ["arnos-stuff <bcda0276@gmail.com>"]
+readme = "README.md"
+packages = [{include = "mw_dube_dashboard"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.9.7 || >3.9.7,<4.0"
+streamlit = "^1.19.0"
+plotly = "^5.13.1"
+plotly-express = "^0.4.1"
+streamlit-aggrid = "^0.3.4"
+typer = {extras = ["all"], version = "^0.7.0"}
+pandas = "^1.5.3"
+xgboost = "^1.7.4"
+scikit-learn = "^1.2.1"
+ray = {extras = ["air"], version = "^2.3.0"}
+xgboost-ray = "^0.1.15"
+
+
+[tool.poetry.scripts]
+mwdash = "mw_dube_dashboard.cli:app"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
